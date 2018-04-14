@@ -1,29 +1,29 @@
-#include "item.h"
+#include "Item.h"
 using namespace std;
 
 // a vector that contains all of the possible batters
 //
-vector<string> item::AVAILbatters = {"Regular","Chocolate","Blueberry","Devil's Food"};
+vector<string> Item::AVAILbatters = {"Regular","Chocolate","Blueberry","Devil's Food"};
 
 // a vector that contains all of the possible toppings
 // the id of a topping is its position in this vector
-vector<string> item::AVAILtoppings = {"None","Glazed","Sugar","Powdered Sugar","Chocolate with Sprinkles","Chocolate","Maple"};
+vector<string> Item::AVAILtoppings = {"None","Glazed","Sugar","Powdered Sugar","Chocolate with Sprinkles","Chocolate","Maple"};
 
 
 
-int item::getID() {
+int Item::getID() {
 	return id;
 }
 
-string item::getType() {
+string Item::getType() {
 	return type;
 }
 
-string item::getName() {
+string Item::getName() {
 	return name;
 }
 
-float item::getPPU() {
+float Item::getPPU() {
 	return ppu;
 }
 
@@ -31,23 +31,23 @@ float item::getPPU() {
 
 // TODO get toppings
 
-void item::setID(int newid) {
+void Item::setID(int newid) {
 	id = newid;
 }
 
-void item::setType(string newtype) {
+void Item::setType(string newtype) {
 	type = newtype;
 }
 
-void item::setName(string newname) {
+void Item::setName(string newname) {
 	name = newname;
 }
 
-void item::setPPU(float newppu) {
+void Item::setPPU(float newppu) {
 	ppu = newppu;
 }
 
-void item::addBatter(int newid) {
+void Item::addBatter(int newid) {
 	vector<int>::iterator it;
 	it = batters.begin();
 
@@ -62,7 +62,7 @@ void item::addBatter(int newid) {
 	batters.insert(it,newid);
 }
 
-void item::addTopping(int newid) {
+void Item::addTopping(int newid) {
 	vector<int>::iterator it;
 	it = toppings.begin();
 
@@ -77,7 +77,7 @@ void item::addTopping(int newid) {
 	toppings.insert(it,newid);
 }
 
-void item::removeBatter(int removeid) {
+void Item::removeBatter(int removeid) {
 	int size = batters.size();
 
 	for (int i = 0; i < size; i++) {
@@ -89,7 +89,7 @@ void item::removeBatter(int removeid) {
 	}
 }
 
-void item::removeTopping(int removeid) {
+void Item::removeTopping(int removeid) {
 	int size = toppings.size();
 
 	for (int i = 0; i < size; i++) {
@@ -110,11 +110,4 @@ void item::removeTopping(int removeid) {
 
 
 
-
-
-
-
-item::~item() {
-	// TODO Auto-generated destructor stub
-}
 

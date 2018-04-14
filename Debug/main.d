@@ -1,4 +1,4 @@
-main.o: ../main.cpp ../main.h ../item.h \
+main.o: ../main.cpp ../main.h ../Table.h ../Row.h \
  C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/json.h \
  C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/autolink.h \
  C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/config.h \
@@ -7,11 +7,13 @@ main.o: ../main.cpp ../main.h ../item.h \
  C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/forwards.h \
  C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/reader.h \
  C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/features.h \
- C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/writer.h
+ C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/writer.h ../Item.h
 
 ../main.h:
 
-../item.h:
+../Table.h:
+
+../Row.h:
 
 C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/json.h:
 
@@ -30,3 +32,5 @@ C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/reader.h:
 C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/features.h:
 
 C:\Users\matth\ECLIPSE\ PROJECTS\jsoncpp\include/json/writer.h:
+
+../Item.h:

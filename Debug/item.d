@@ -1,3 +1,3 @@
-item.o: ../item.cpp ../item.h
+Item.o: ../Item.cpp ../Item.h
 
-../item.h:
+../Item.h:

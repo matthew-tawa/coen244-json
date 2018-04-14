@@ -13,7 +13,7 @@ int main (int argc, const char * argv[]) {
 	bool ok = Json::parseFromStream(builder, cin, &root, &errs);
 
 	// 'items' will be the c++ representation of all the items in the json file
-	vector<item> items;
+	vector<Item> items;
 	int numitems = root["items"]["item"].size();
 	items.resize(numitems);
 
@@ -54,9 +54,7 @@ int main (int argc, const char * argv[]) {
 			} else {	// if the 'batterid' is valid, then add it to the array of batters for the given item
 				items[i].addBatter(batterid);
 			}
-
 		}
-
 
 		// properly setting the 'toppings' of item[i]
 		int tsize = root["items"]["item"][i]["topping"].size();
@@ -71,13 +69,19 @@ int main (int argc, const char * argv[]) {
 			} else {	// if the 'batterid' is valid, then add it to the array of batters for the given item
 				items[i].addTopping(toppingid);
 			}
-
 		}
-
-
 	}
 
-	cout << items[1].getID() << endl << items[1].getType() << endl << items[1].getName() << endl;
+	// after this for loop, we now have a vector 'items' that contains all of the items
+	// that are described in the json file input to the program
+	// the next step is to construct a table of all the combinations possible
+	// once the table is made, then the users sorting can be performed
+
+	Table table;
+
+
+	// this loop will add all of the possible combinations to the table
+
 
 
 
@@ -87,8 +91,6 @@ int main (int argc, const char * argv[]) {
 // adding a new member to the object:
 //	root["four"] = true;
 //	two = root["four"].asString();
-
-	cout << numitems << endl;
 
 	return 0;
 }
@@ -101,8 +103,8 @@ int main (int argc, const char * argv[]) {
 // gets the batter id of a given batter
 // returns -1 if not in 'AVAILbatters'
 int getBatterID(string btype) {
-	for (size_t i = 0; i < item::AVAILbatters.size(); i++) {
-		if (btype == item::AVAILbatters[i]) {
+	for (size_t i = 0; i < Item::AVAILbatters.size(); i++) {
+		if (btype == Item::AVAILbatters[i]) {
 			return i;
 		}
 	}
@@ -112,8 +114,8 @@ int getBatterID(string btype) {
 // gets the topping id of a given topping
 // returns -1 if not in 'AVAILtoppings'
 int getToppingID(string ttype) {
-	for (size_t i = 0; i < item::AVAILtoppings.size(); i++) {
-		if (ttype == item::AVAILtoppings[i]) {
+	for (size_t i = 0; i < Item::AVAILtoppings.size(); i++) {
+		if (ttype == Item::AVAILtoppings[i]) {
 			return i;
 		}
 	}

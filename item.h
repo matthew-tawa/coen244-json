@@ -6,13 +6,13 @@
 #include <vector>
 //
 
-class item {
+class Item {
 
 public:
 	// constructors & destructor {
-	item() : id(0), type(""), name(""), ppu(0) {}
-	item(int _id, std::string _type,std::string _name,float _ppu,std::vector<int> _batters,std::vector<int> _toppings) : id(_id), type(_type), name(_name), ppu(_ppu), batters(_batters), toppings(_toppings) {}
-	virtual ~item();
+	Item() : id(0), type(""), name(""), ppu(0) {}
+	Item(int _id, std::string _type,std::string _name,float _ppu,std::vector<int> _batters,std::vector<int> _toppings) : id(_id), type(_type), name(_name), ppu(_ppu), batters(_batters), toppings(_toppings) {}
+	virtual ~Item() {}
 	// }
 
 	// get functions {
