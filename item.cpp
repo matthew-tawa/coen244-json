@@ -1,3 +1,6 @@
+// MATTHEW TAWA	  :: 40058819
+// VICTOR TUDORAN :: 40057660
+
 #include "Item.h"
 using namespace std;
 
@@ -35,9 +38,13 @@ int Item::getToppingSize() const {
 	return toppings.size();
 }
 
-// TODO get batters
+string Item::getBatterString(int batterid) const {
+	return AVAILbatters[batterid];
+}
 
-// TODO get toppings
+string Item::getToppingString(int toppingid) const {
+	return AVAILtoppings[toppingid];
+}
 
 void Item::setID(int newid) {
 	id = newid;

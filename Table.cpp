@@ -1,3 +1,6 @@
+// MATTHEW TAWA	  :: 40058819
+// VICTOR TUDORAN :: 40057660
+
 #include "Table.h"
 using namespace std;
 
@@ -11,6 +14,10 @@ void Table::setNumRows(int numrows) {
 
 void Table::addRow(const Row& newrow) {
 	rows.push_back(newrow);
+}
+
+void print() {
+
 }
 
 

@@ -1,3 +1,6 @@
+// MATTHEW TAWA	  :: 40058819
+// VICTOR TUDORAN :: 40057660
+
 #include "main.h"
 using namespace std;
 
@@ -12,10 +15,24 @@ int main (int argc, const char * argv[]) {
 	JSONCPP_STRING errs;
 	bool ok = Json::parseFromStream(builder, cin, &root, &errs);
 
+	if (!ok) {	// if the file was not parsed correctly, exit
+		cout << "ERROR: File could not be parsed." << endl;
+		exit(1);
+	}
+
+
+
 	// 'items' will be the c++ representation of all the items in the json file
 	vector<Item> items;
 	int numitems = root["items"]["item"].size();
 	items.resize(numitems);
+
+
+
+	// counts the number of errors encountered when creating the items array
+	// these errors are due to invalid topping/batter names given in the json
+	int battererrors;
+	int toppingerrors;
 
 	// for each item in the array of items, we want to create an item in our vector 'items'
 	// that represents it
@@ -44,13 +61,12 @@ int main (int argc, const char * argv[]) {
 		// properly setting the 'batters' of item[i]
 		int bsize = root["items"]["item"][i]["batters"]["batter"].size();
 		for (int j = 0; j < bsize; j++) {
-			// getting the batters name
-			string batter = root["items"]["item"][i]["batters"]["batter"][j]["type"].asString();
-			// using the batters name to get the batters id
-			int batterid = getBatterID(batter);
+			string batter = root["items"]["item"][i]["batters"]["batter"][j]["type"].asString(); // getting the batters name
+
+			int batterid = getBatterID(batter);	// using the batters name to get the batters id
 
 			if (batterid < 0) {	// if the 'batterid' is less than 0, the batter was not found in the list of available batters
-				// TODO: error count? different types of errors?
+				battererrors++;
 			} else {	// if the 'batterid' is valid, then add it to the array of batters for the given item
 				items[i].addBatter(batterid);
 			}
@@ -59,18 +75,19 @@ int main (int argc, const char * argv[]) {
 		// properly setting the 'toppings' of item[i]
 		int tsize = root["items"]["item"][i]["topping"].size();
 		for (int k = 0; k < tsize; k++) {
-			// getting the batters name
-			string topping = root["items"]["item"][i]["topping"][k]["type"].asString();
-			// using the batters name to get the batters id
-			int toppingid = getToppingID(topping);
+			string topping = root["items"]["item"][i]["topping"][k]["type"].asString(); // getting the batters name
+
+			int toppingid = getToppingID(topping); // using the batters name to get the batters id
 
 			if (toppingid < 0) {	// if the 'batterid' is less than 0, the batter was not found in the list of available batters
-				// TODO: error count? different types of errors?
+				toppingerrors++;
 			} else {	// if the 'batterid' is valid, then add it to the array of batters for the given item
 				items[i].addTopping(toppingid);
 			}
 		}
 	}
+
+
 
 	// after this for loop, we now have a vector 'items' that contains all of the items
 	// that are described in the json file input to the program
@@ -78,7 +95,6 @@ int main (int argc, const char * argv[]) {
 	// once the table is made, then the users sorting can be performed
 
 	Table table;	// the table where the info will be sorted
-
 
 	// this loop will add all of the possible combinations to the table
 	for (int i = 0; i < numitems; i++) {
@@ -90,31 +106,27 @@ int main (int argc, const char * argv[]) {
 
 		for (int j = 0; j < items[i].getBatterSize(); j++) {	// for each batter
 			for (int k = 0; k < items[i].getToppingSize(); k++) {	// for each topping, create a row
-				y = ;
-				z = ;
+				y = items[i].getBatterString(j);	// getting a batter
+				z = items[i].getToppingString(k);	// getting a topping
 
-				Row* r = new Row(v,w,x,y,z);
-				Table.addRow(*r);
+				Row* r = new Row(v,w,x,y,z);	// creating a new row
+				table.addRow(*r);	// adding the new row to the table
 			}
 		}
-
-
 	}
 
 
 
 
 
-	//string two = root["two"][1]["id"].asString();
-// adding a new member to the object:
-//	root["four"] = true;
-//	two = root["four"].asString();
+
+
+
+
+	// TODO print number of errors
 
 	return 0;
 }
-
-
-
 
 
 

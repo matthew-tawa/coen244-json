@@ -1,3 +1,6 @@
+// MATTHEW TAWA	  :: 40058819
+// VICTOR TUDORAN :: 40057660
+
 #ifndef ITEM_H_
 #define ITEM_H_
 
@@ -22,8 +25,9 @@ public:
 	float getPPU() const;
 	int getBatterSize() const;
 	int getToppingSize() const;
-	// TODO get batters?
-	// TODO get toppings?
+
+	std::string getBatterString(int batterid) const;
+	std::string getToppingString(int toppingid) const;
 	// }
 
 

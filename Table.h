@@ -1,3 +1,6 @@
+// MATTHEW TAWA	  :: 40058819
+// VICTOR TUDORAN :: 40057660
+
 #ifndef TABLE_H_
 #define TABLE_H_
 
@@ -14,13 +17,15 @@ public:
 	virtual ~Table() {}
 	// }
 
-	// misc
+	// misc {
 	int getNumRows();
 	void setNumRows(int numrows);
 	void addRow(const Row& newrow);
 
 	void sort(std::string field);
-	//
+
+	void print();
+	// }
 
 
 
