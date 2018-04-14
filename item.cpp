@@ -11,20 +11,28 @@ vector<string> Item::AVAILtoppings = {"None","Glazed","Sugar","Powdered Sugar","
 
 
 
-int Item::getID() {
+int Item::getID() const {
 	return id;
 }
 
-string Item::getType() {
+string Item::getType() const {
 	return type;
 }
 
-string Item::getName() {
+string Item::getName() const {
 	return name;
 }
 
-float Item::getPPU() {
+float Item::getPPU() const {
 	return ppu;
+}
+
+int Item::getBatterSize() const {
+	return batters.size();
+}
+
+int Item::getToppingSize() const {
+	return toppings.size();
 }
 
 // TODO get batters

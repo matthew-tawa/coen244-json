@@ -11,6 +11,7 @@ class Row {
 public:
 	// constructors & destructor {
 	Row() : id(0),type(""),name(""),batter(""),topping("") {}
+	Row(int _id,std::string _type,std::string _name,std::string _batter,std::string _topping) : id(_id),type(_type),name(_name),batter(_batter),topping(_topping) {}
 	virtual ~Row() {}
 	// }
 

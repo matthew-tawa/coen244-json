@@ -16,10 +16,12 @@ public:
 	// }
 
 	// get functions {
-	int getID();
-	std::string getType();
-	std::string getName();
-	float getPPU();
+	int getID() const;
+	std::string getType() const;
+	std::string getName() const;
+	float getPPU() const;
+	int getBatterSize() const;
+	int getToppingSize() const;
 	// TODO get batters?
 	// TODO get toppings?
 	// }

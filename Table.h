@@ -15,6 +15,10 @@ public:
 	// }
 
 	// misc
+	int getNumRows();
+	void setNumRows(int numrows);
+	void addRow(const Row& newrow);
+
 	void sort(std::string field);
 	//
 

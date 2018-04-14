@@ -77,11 +77,29 @@ int main (int argc, const char * argv[]) {
 	// the next step is to construct a table of all the combinations possible
 	// once the table is made, then the users sorting can be performed
 
-	Table table;
+	Table table;	// the table where the info will be sorted
 
 
 	// this loop will add all of the possible combinations to the table
+	for (int i = 0; i < numitems; i++) {
+		int v = items[i].getID();		// item id
+		string w = items[i].getType();	// item type
+		string x = items[i].getName();	// item name
+		string y;	// will be used for batters
+		string z;	// will be used for toppings
 
+		for (int j = 0; j < items[i].getBatterSize(); j++) {	// for each batter
+			for (int k = 0; k < items[i].getToppingSize(); k++) {	// for each topping, create a row
+				y = ;
+				z = ;
+
+				Row* r = new Row(v,w,x,y,z);
+				Table.addRow(*r);
+			}
+		}
+
+
+	}
 
 
 
