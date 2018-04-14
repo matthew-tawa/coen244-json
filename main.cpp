@@ -31,8 +31,8 @@ int main (int argc, const char * argv[]) {
 
 	// counts the number of errors encountered when creating the items array
 	// these errors are due to invalid topping/batter names given in the json
-	int battererrors;
-	int toppingerrors;
+	int battererrors = 0;
+	int toppingerrors = 0;
 
 	// for each item in the array of items, we want to create an item in our vector 'items'
 	// that represents it
@@ -115,15 +115,25 @@ int main (int argc, const char * argv[]) {
 		}
 	}
 
+	// TODO deal with the main argument and sort the table
 
 
 
+	// now that the table is sorted, it can be printed
+	table.print();
 
-
-
-
-
-	// TODO print number of errors
+	// and then the errors can be printed
+	if (battererrors > 0 || toppingerrors > 0) {
+		cout << endl << endl
+			 << "Some errors were encountered when parsing." << endl
+			 << setw(20) << "Number of invalid" << endl;
+		if (battererrors > 0) {
+			cout << setw(23) << "batters found:   " << battererrors << endl;
+		}
+		if (toppingerrors > 0) {
+			cout << setw(23) << "toppings found:   " << toppingerrors << endl;
+		}
+	}
 
 	return 0;
 }

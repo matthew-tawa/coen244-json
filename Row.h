@@ -6,6 +6,7 @@
 
 // includes
 #include <iostream>
+#include <iomanip>
 #include <string>
 //
 
@@ -32,6 +33,10 @@ public:
 	void setName(std::string newname);
 	void setBatter(std::string newbatter);
 	void setTopping(std::string newtopping);
+	// }
+
+	// misc {
+	void print();
 	// }
 
 private:

@@ -44,6 +44,13 @@ void Row::setTopping(string newtopping) {
 	topping = newtopping;
 }
 
+void Row::print() {
+	cout << setfill('0') << setw(4) << id << setfill(' ')
+		 << setw(12) << type
+		 << setw(12) << name
+		 << setw(15) << batter
+		 << setw(28) << topping << endl;
+}
 
 
 

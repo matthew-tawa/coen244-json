@@ -38,14 +38,14 @@
 							{
 								"batter":
 									[
-										{ "id": "1001", "type": "Regular" },
+										{ "id": "1001", "type": "lol" },
 										{ "id": "1002", "type": "Chocolate" }
 									]
 							},
 						"topping":
 							[
 								{ "id": "5001", "type": "None" },
-								{ "id": "5002", "type": "Glazed" },
+								{ "id": "5002", "type": "xD" },
 								{ "id": "5005", "type": "Sugar" },
 								{ "id": "5007", "type": "Powdered Sugar" },
 								{ "id": "5006", "type": "Chocolate with Sprinkles" }
