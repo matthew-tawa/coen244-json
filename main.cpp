@@ -5,6 +5,8 @@
 using namespace std;
 
 // ----- INSTRUCTIONS TO CALL PROGRAM {
+//			we have chosen to use 'jsoncpp' as our json parser.
+//
 // 			in the command prompt, the program should be called as such:
 //
 //			FILE_EXE_PATH Field_to_sort <INPUT_FILE.txt >OUTPUT_FILE.txt
