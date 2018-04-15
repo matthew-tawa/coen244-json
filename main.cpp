@@ -11,6 +11,8 @@ using namespace std;
 //
 //			include the 'less than' and 'greater than' operators. they are used to redirect the
 //			standard input/output of the file.
+//			ensure that the input and output files are in the same directory
+//			as the project.
 // ----- }
 
 int main (int argc, const char * argv[]) {

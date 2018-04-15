@@ -1,40 +1,37 @@
-1
-
-
   id        type        name         batter                     topping
   --        ----        ----         ------                     -------
-0001       donut        Cake      Blueberry    Chocolate with Sprinkles
-0001       donut        Cake      Blueberry              Powdered Sugar
-0001       donut        Cake      Blueberry                       Sugar
-0001       donut        Cake      Blueberry                      Glazed
-0001       donut        Cake      Blueberry                       Maple
 0001       donut        Cake      Blueberry                   Chocolate
-0001       donut        Cake      Blueberry                        None
-0001       donut        Cake      Chocolate                       Sugar
-0001       donut        Cake      Chocolate                       Maple
-0001       donut        Cake      Chocolate                   Chocolate
-0001       donut        Cake      Chocolate    Chocolate with Sprinkles
-0001       donut        Cake      Chocolate              Powdered Sugar
-0001       donut        Cake      Chocolate                      Glazed
-0001       donut        Cake      Chocolate                        None
-0001       donut        Cake   Devil's Food    Chocolate with Sprinkles
-0001       donut        Cake   Devil's Food                        None
-0001       donut        Cake   Devil's Food                      Glazed
-0001       donut        Cake   Devil's Food                       Sugar
-0001       donut        Cake   Devil's Food              Powdered Sugar
-0001       donut        Cake   Devil's Food                   Chocolate
-0001       donut        Cake   Devil's Food                       Maple
-0007       bagel     cupcake        Regular                        None
-0007       bagel     cupcake        Regular                      Glazed
-0007       bagel     cupcake        Regular                       Sugar
-0001       donut        Cake        Regular                        None
-0007       bagel     cupcake        Regular              Powdered Sugar
-0001       donut        Cake        Regular                       Maple
 0001       donut        Cake        Regular                   Chocolate
+0001       donut        Cake   Devil's Food                   Chocolate
+0001       donut        Cake      Chocolate                   Chocolate
+0001       donut        Cake      Blueberry    Chocolate with Sprinkles
 0001       donut        Cake        Regular    Chocolate with Sprinkles
-0001       donut        Cake        Regular              Powdered Sugar
-0001       donut        Cake        Regular                       Sugar
+0001       donut        Cake   Devil's Food    Chocolate with Sprinkles
+0001       donut        Cake      Chocolate    Chocolate with Sprinkles
 0001       donut        Cake        Regular                      Glazed
+0001       donut        Cake   Devil's Food                      Glazed
+0001       donut        Cake      Blueberry                      Glazed
+0001       donut        Cake      Chocolate                      Glazed
+0007       bagel     cupcake        Regular                      Glazed
+0001       donut        Cake   Devil's Food                       Maple
+0001       donut        Cake      Chocolate                       Maple
+0001       donut        Cake        Regular                       Maple
+0001       donut        Cake      Blueberry                       Maple
+0007       bagel     cupcake        Regular                        None
+0001       donut        Cake      Blueberry                        None
+0001       donut        Cake      Chocolate                        None
+0001       donut        Cake        Regular                        None
+0001       donut        Cake   Devil's Food                        None
+0007       bagel     cupcake        Regular              Powdered Sugar
+0001       donut        Cake   Devil's Food              Powdered Sugar
+0001       donut        Cake      Blueberry              Powdered Sugar
+0001       donut        Cake      Chocolate              Powdered Sugar
+0001       donut        Cake        Regular              Powdered Sugar
+0001       donut        Cake   Devil's Food                       Sugar
+0001       donut        Cake      Blueberry                       Sugar
+0001       donut        Cake      Chocolate                       Sugar
+0007       bagel     cupcake        Regular                       Sugar
+0001       donut        Cake        Regular                       Sugar
 
 
 Some errors were encountered when parsing.
