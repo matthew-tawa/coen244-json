@@ -117,7 +117,7 @@ int main (int argc, const char * argv[]) {
 
 	// TODO deal with the main argument and sort the table
 
-
+	table.sort("batter");
 
 	// now that the table is sorted, it can be printed
 	table.print();

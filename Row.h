@@ -20,11 +20,11 @@ public:
 	// }
 
 	// get {
-	int getID();
-	std::string getType();
-	std::string getName();
-	std::string getBatter();
-	std::string getTopping();
+	int getID() const;
+	std::string getType() const;
+	std::string getName() const;
+	std::string getBatter() const;
+	std::string getTopping() const;
 	// }
 
 	// set {

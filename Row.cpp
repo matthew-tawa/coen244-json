@@ -4,23 +4,23 @@
 #include "Row.h"
 using namespace std;
 
-int Row::getID() {
+int Row::getID() const{
 	return id;
 }
 
-string Row::getType() {
+string Row::getType() const{
 	return type;
 }
 
-string Row::getName() {
+string Row::getName() const{
 	return name;
 }
 
-string Row::getBatter() {
+string Row::getBatter() const{
 	return batter;
 }
 
-string Row::getTopping() {
+string Row::getTopping() const{
 	return topping;
 }
 

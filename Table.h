@@ -6,6 +6,7 @@
 
 // includes
 #include <vector>
+#include <algorithm>
 #include "Row.h"
 //
 
@@ -35,7 +36,11 @@ private:
 	// }
 
 	// methods {
-	// all the private sorting methods
+	bool compareID(const Row& a, const Row& b);
+	bool compareType(const Row& a, const Row& b);
+	bool compareName(const Row& a, const Row& b);
+	bool compareBatter(const Row& a, const Row& b);
+	bool compareTopping(const Row& a, const Row& b);
 	// }
 };
 
