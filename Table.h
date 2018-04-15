@@ -36,11 +36,11 @@ private:
 	// }
 
 	// methods {
-	bool compareID(const Row& a, const Row& b);
-	bool compareType(const Row& a, const Row& b);
-	bool compareName(const Row& a, const Row& b);
-	bool compareBatter(const Row& a, const Row& b);
-	bool compareTopping(const Row& a, const Row& b);
+	static bool compareID(const Row& a, const Row& b);
+	static bool compareType(const Row& a, const Row& b);
+	static bool compareName(const Row& a, const Row& b);
+	static bool compareBatter(const Row& a, const Row& b);
+	static bool compareTopping(const Row& a, const Row& b);
 	// }
 };
 

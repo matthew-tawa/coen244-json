@@ -4,9 +4,24 @@
 #include "main.h"
 using namespace std;
 
-
+// ----- INSTRUCTIONS TO CALL PROGRAM {
+// 			in the command prompt, the program should be called as such:
+//
+//			FILE_EXE_PATH Field_to_sort <INPUT_FILE.txt >OUTPUT_FILE.txt
+//
+//			include the 'less than' and 'greater than' operators. they are used to redirect the
+//			standard input/output of the file.
+// ----- }
 
 int main (int argc, const char * argv[]) {
+
+	if (argc > 2) {
+		cout << "Invalid number of arguments. Call in the following format:" << endl
+			 << "FILE_EXE_PATH Field_to_sort < INPUT_FILE.txt > OUTPUT_FILE.txt" << endl << endl
+			 << "NOTE: if no field to sort is specified, the default sort is by ID." << endl;
+		exit(1);
+	}
+
 
 	// parsing the file with jsoncpp
 	// 'root' is the root of the tree that has all the json files information
@@ -16,7 +31,7 @@ int main (int argc, const char * argv[]) {
 	bool ok = Json::parseFromStream(builder, cin, &root, &errs);
 
 	if (!ok) {	// if the file was not parsed correctly, exit
-		cout << "ERROR: File could not be parsed." << endl;
+		cout << "ERROR: File could not be parsed. Please check JSON file and try again." << endl;
 		exit(1);
 	}
 
@@ -115,9 +130,22 @@ int main (int argc, const char * argv[]) {
 		}
 	}
 
-	// TODO deal with the main argument and sort the table
 
-	table.sort("batter");
+
+	// now that the table is created, it must be sorted according to the users input
+	// if the user does not input a field, it is sorted by 'id' by default
+	// otherwise it is sorted according to the users choice
+	switch (argc) {
+	case 1:	// no arguments -> sort by id
+		table.sort("id");
+		break;
+	case 2:	// 1 argument   -> sort by given field
+		string sortfield = argv[1];
+		table.sort(sortfield);
+		break;
+	}
+
+
 
 	// now that the table is sorted, it can be printed
 	table.print();
@@ -161,12 +189,5 @@ int getToppingID(string ttype) {
 	}
 	return -1;
 }
-
-
-
-
-
-
-
 
 
