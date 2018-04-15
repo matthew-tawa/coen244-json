@@ -15,6 +15,7 @@ using namespace std;
 
 int main (int argc, const char * argv[]) {
 
+	// checking to make sure the right number of arguments was used
 	if (argc > 2) {
 		cout << "Invalid number of arguments. Call in the following format:" << endl
 			 << "FILE_EXE_PATH Field_to_sort < INPUT_FILE.txt > OUTPUT_FILE.txt" << endl << endl
